@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class PeopleDTO extends {
+public class PeopleDTO {
 
-    //private List<NewPeopleDTO> people;
+    private List<People_DTO> people;
 }

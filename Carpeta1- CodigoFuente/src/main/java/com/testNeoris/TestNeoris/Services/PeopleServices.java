@@ -31,28 +31,36 @@ public class PeopleServices {
 
     public PeopleDTO getPeople(){
         PeopleDTO peopleDTO = new PeopleDTO();
-        countriesDTO.setCountries(mapToCountriesDTO(getUsers()));
+        peopleDTO.setPeople(mapToCountriesDTO(getUsers()));
         return peopleDTO;
     }
     public List<PeopleEntity> getUsers(){
         logger.info("countries :::: --> "+peopleRepository.findAll());
         return peopleRepository.findAll();
     }
-    public List<PeopleDTO> mapToCountriesDTO(List<PeopleEntity> users){
-        List<PeopleDTO> countriesDTOS = new ArrayList<PeopleDTO>();
+    public List<People_DTO> mapToCountriesDTO(List<PeopleEntity> users){
+        List<People_DTO> usersDTOs = new ArrayList<People_DTO>();
 
         if(users.size() > 0) {
             for(PeopleEntity user : users) {
-//                System.out.println("**** "+countries);
-                PeopleDTO peopleDTO = new PeopleDTO();
-                peopleDTO.(user.getUniqid());
-                countriesDTO.setNameContry(country.getCountrie());
-                countriesDTOS.add(countriesDTO);
-//                logger.info("--::> "+country.getCode());
+                System.out.println("**** "+users);
+                People_DTO people_dto = new People_DTO();
+                people_dto.setUser_uniqid(user.getUniqid());
+                people_dto.setNames(user.getNames());
+                people_dto.setLastNames(user.getLastNames());
+                people_dto.setNumber(user.getNumber());
+                people_dto.setDateofBirth(user.getDateofBirth());
+                people_dto.setPlaceOfBirth(user.getPlaceOfBirth());
+                people_dto.setHeight(user.getHeight());
+                people_dto.setRh(user.getRh());
+                people_dto.setSex(user.getType_sex());
+                people_dto.setExpeditionDate(user.getExpeditionDate());
+                people_dto.setExpeditionPlace(user.getExpeditionPlace());
+
+                usersDTOs.add(people_dto);
             }
         }
-//        logger.info("--> "+countriesDTOS);
-        return countriesDTOS;
+        return usersDTOs;
     }
 
     //*** Get data user_id
@@ -87,6 +95,7 @@ public class PeopleServices {
         }
         return people_dto;
     }
+
 
 
 
