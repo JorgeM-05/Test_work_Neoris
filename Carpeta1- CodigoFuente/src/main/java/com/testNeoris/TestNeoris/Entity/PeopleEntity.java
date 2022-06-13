@@ -12,7 +12,7 @@ import javax.persistence.Column;
 
 @Data
 @Entity
-@Table(name = "people")
+@Table(name = "people3")
 public class PeopleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ public class PeopleEntity {
     public float height;
     @Column(name = "rh")
     public String rh;
-    @Column(name = "sex")
+    @Column(name = "t_sex")
     public String sex;
     @Column(name = "expedition_date")
     public String expeditionDate;

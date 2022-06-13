@@ -43,7 +43,6 @@ public class PeopleController {
 
     @PostMapping
     public ResponseEntity<People_DTO> createNewUser(@RequestBody NewPeopleDTO newPeopleDTO){
-        logger.info("POST....."+newPeopleDTO);
         People_DTO people_dto = peopleServices.createUser(newPeopleDTO);
         return new ResponseEntity<People_DTO>(people_dto, HttpStatus.CREATED);
     }
@@ -58,8 +57,6 @@ public class PeopleController {
     @DeleteMapping("/{user_id}")
     public ResponseEntity<?> DeletecUser(@PathVariable int user_id){
         peopleRepository.deleteById(user_id);
-        //People_DTO people_dto = peopleServices.getDataUser(user_id);
-        //HttpStatus httpStatus = people_dto.getUser_uniqid() == 0 ? HttpStatus.NOT_FOUND:HttpStatus.OK;
         return ResponseEntity.ok().build();
     }
 }

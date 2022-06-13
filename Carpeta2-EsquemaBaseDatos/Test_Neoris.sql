@@ -7,7 +7,7 @@ CREATE TABLE people(
     place_of_birth VARCHAR(100),
     height FLOAT,
     rh VARCHAR(100),
-    sex VARCHAR(100),
+    t_sex VARCHAR(100),
     expedition_date VARCHAR(100),
     expedition_place VARCHAR(100),
 

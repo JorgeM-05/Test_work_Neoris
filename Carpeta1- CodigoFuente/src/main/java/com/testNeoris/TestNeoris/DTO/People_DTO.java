@@ -5,7 +5,6 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-//sin usar
 public class People_DTO {
     public int user_uniqid;
     public String names;

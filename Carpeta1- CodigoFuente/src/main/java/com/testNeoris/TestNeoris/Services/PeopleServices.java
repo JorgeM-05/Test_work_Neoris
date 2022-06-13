@@ -35,7 +35,6 @@ public class PeopleServices {
         return peopleDTO;
     }
     public List<PeopleEntity> getUsers(){
-        logger.info("countries :::: --> "+peopleRepository.findAll());
         return peopleRepository.findAll();
     }
     public List<People_DTO> mapToCountriesDTO(List<PeopleEntity> users){
@@ -43,7 +42,6 @@ public class PeopleServices {
 
         if(users.size() > 0) {
             for(PeopleEntity user : users) {
-                System.out.println("**** "+users);
                 People_DTO people_dto = new People_DTO();
                 people_dto.setUser_uniqid(user.getUniqid());
                 people_dto.setNames(user.getNames());
@@ -66,7 +64,6 @@ public class PeopleServices {
     //*** Get data user_id
 
     public People_DTO getDataUser(int user_id){
-        logger.info("user :: " + user_id);
         PeopleEntity peopleEntity = peopleRepository.findByUniqid(user_id);
 
         if(peopleEntity == null){
@@ -76,7 +73,6 @@ public class PeopleServices {
     }
 
     public People_DTO mapToUserDTO(PeopleEntity peopleEntity) {
-        logger.info("****************** " +  peopleEntity);
 
         People_DTO people_dto = new People_DTO();
 
@@ -97,20 +93,14 @@ public class PeopleServices {
     }
 
 
-
-
     //*** Post update user
     public People_DTO createUser(NewPeopleDTO newPeopleDTO){
-        System.out.println("createUser");
         return mapToUserDemographicDTO(createNewUser(newPeopleDTO));
     }
 
     public PeopleEntity createNewUser(NewPeopleDTO newPeopleDTO){
-        logger.info("******  >>>> " + newPeopleDTO);
 
         PeopleEntity peopleEntity = null;
-
-        //if(isValidNewUserReceptionRecord(newPeopleDTO)){
 
             peopleEntity = new PeopleEntity();
 
@@ -126,12 +116,11 @@ public class PeopleServices {
             peopleEntity.setExpeditionPlace(newPeopleDTO.getExpeditionPlace());
 
             peopleRepository.save(peopleEntity);
-        //}
+
         return peopleEntity;
     }
 
     public People_DTO mapToUserDemographicDTO(PeopleEntity peopleEntity) {
-        logger.info("****************** " +  peopleEntity);
         People_DTO people_dto = new People_DTO();
 
         if(people_dto != null) {
@@ -156,8 +145,6 @@ public class PeopleServices {
     //*** PUT, update user
 
     public People_DTO updateUser(int user_id, UpdatePeople updatePeople){
-        System.out.println("\n " + "user id : " + user_id);
-        System.out.println("\n " + updatePeople);
         return mapToUserDemographicDTO(update_User(user_id, updatePeople));
     }
 
