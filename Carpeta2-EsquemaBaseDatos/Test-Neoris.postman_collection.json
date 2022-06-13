@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "147a314f-0f8f-4db5-b572-eb1c3afaf63f",
+		"name": "Test-Neoris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13312703"
+	},
+	"item": [
+		{
+			"name": "GET-All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEW-USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"names\": \"Jorge \",\r\n  \"lastNames\": \"Munoz \",\r\n  \"number\": 1088974465,\r\n  \"dateofBirth\": \"1993-10-05\",\r\n  \"placeOfBirth\": \"La Cruz(N)\",\r\n  \"height\": 1.69,\r\n  \"rh\": \"O+\",\r\n  \"sex\": \"M\",\r\n  \"expeditionDate\": \"2011-10-06\",\r\n  \"expeditionPlace\": \"La Cruz(N)\",\r\n  \"user_uniqid\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE-USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"names\": \"Jorge A\",\r\n  \"lastNames\": \"Munoz O\",\r\n  \"number\": 1088974465,\r\n  \"dateofBirth\": \"1993-10-05\",\r\n  \"placeOfBirth\": \"La Cruz(Narino)\",\r\n  \"height\": 1.68,\r\n  \"rh\": \"O+\",\r\n  \"sex\": \"M\",\r\n  \"expeditionDate\": \"2011-10-06\",\r\n  \"expeditionPlace\": \"La Cruz(Narino)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/people/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELECT-ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

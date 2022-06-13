@@ -53,7 +53,7 @@ public class PeopleServices {
                 people_dto.setPlaceOfBirth(user.getPlaceOfBirth());
                 people_dto.setHeight(user.getHeight());
                 people_dto.setRh(user.getRh());
-                people_dto.setSex(user.getType_sex());
+                people_dto.setSex(user.getSex());
                 people_dto.setExpeditionDate(user.getExpeditionDate());
                 people_dto.setExpeditionPlace(user.getExpeditionPlace());
 
@@ -89,7 +89,7 @@ public class PeopleServices {
             people_dto.setPlaceOfBirth(peopleEntity.getPlaceOfBirth());
             people_dto.setHeight(peopleEntity.getHeight());
             people_dto.setRh(peopleEntity.getRh());
-            people_dto.setSex(peopleEntity.getType_sex());
+            people_dto.setSex(peopleEntity.getSex());
             people_dto.setExpeditionDate(peopleEntity.getExpeditionDate());
             people_dto.setExpeditionPlace(peopleEntity.getExpeditionPlace());
         }
@@ -121,7 +121,7 @@ public class PeopleServices {
             peopleEntity.setPlaceOfBirth(newPeopleDTO.getPlaceOfBirth());
             peopleEntity.setHeight(newPeopleDTO.getHeight());
             peopleEntity.setRh((newPeopleDTO.getRh()));
-            peopleEntity.setType_sex(newPeopleDTO.getSex());
+            peopleEntity.setSex(newPeopleDTO.getSex());
             peopleEntity.setExpeditionDate(newPeopleDTO.getExpeditionDate());
             peopleEntity.setExpeditionPlace(newPeopleDTO.getExpeditionPlace());
 
@@ -144,7 +144,7 @@ public class PeopleServices {
             people_dto.setPlaceOfBirth(peopleEntity.getPlaceOfBirth());
             people_dto.setHeight(peopleEntity.getHeight());
             people_dto.setRh(peopleEntity.getRh());
-            people_dto.setSex(peopleEntity.getType_sex());
+            people_dto.setSex(peopleEntity.getSex());
             people_dto.setExpeditionDate(peopleEntity.getExpeditionDate());
             people_dto.setExpeditionPlace(peopleEntity.getExpeditionPlace());
 
@@ -175,7 +175,7 @@ public class PeopleServices {
         peopleEntity.setPlaceOfBirth(updatePeople.getPlaceOfBirth());
         peopleEntity.setHeight(updatePeople.getHeight());
         peopleEntity.setRh(updatePeople.getRh());
-        peopleEntity.setType_sex(updatePeople.getSex());
+        peopleEntity.setSex(updatePeople.getSex());
         peopleEntity.setExpeditionDate(updatePeople.getExpeditionDate());
         peopleEntity.setExpeditionPlace(updatePeople.getExpeditionPlace());
 
